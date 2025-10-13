@@ -1,0 +1,12 @@
+# Sample Image Placeholder
+
+This directory should contain sample images for testing the flutter_social_share plugin.
+
+For testing purposes, you can add your own images here or use the image picker functionality in the example app to select images from your device.
+
+Recommended image formats:
+- PNG
+- JPEG
+- GIF (static)
+
+Note: This is just a placeholder file. Replace with actual image files for testing.
