@@ -236,7 +236,7 @@ enum ShareStatus {
 }
 
 enum ShareErrorCode {
-  missingApp,           // Facebook app not installed
+  missingApp,           // App not installed
   invalidPath,          // Invalid or inaccessible image path
   initializationFailed, // Facebook SDK initialization failed
   platformNotSupported, // Platform not supported

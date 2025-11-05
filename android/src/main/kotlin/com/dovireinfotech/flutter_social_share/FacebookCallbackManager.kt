@@ -1,4 +1,4 @@
-package com.example.flutter_social_share
+package com.dovireinfotech.flutter_social_share
 
 import com.facebook.CallbackManager
 

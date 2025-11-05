@@ -1,4 +1,3 @@
-/// Internal exports for the flutter_social_share plugin
 library;
 
 // Models

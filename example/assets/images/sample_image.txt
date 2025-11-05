@@ -9,4 +9,4 @@ Recommended image formats:
 - JPEG
 - GIF (static)
 
-Note: This is just a placeholder file. Replace with actual image files for testing.
+Placeholder for sample images used in testing.

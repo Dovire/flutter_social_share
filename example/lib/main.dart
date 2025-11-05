@@ -57,7 +57,6 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _checkEnvironmentCredentials() {
-    // Check if environment variables are available
     const appId = String.fromEnvironment('FB_APP_ID');
     const clientToken = String.fromEnvironment('FB_CLIENT_TOKEN');
 
@@ -80,10 +79,8 @@ class _HomePageState extends State<HomePage> {
 
     try {
       if (_useEnvironmentCredentials) {
-        // Initialize with environment variables (set via --dart-define)
         await FlutterSocialShare.facebook.init();
       } else {
-        // Initialize with explicit credentials
         if (_appIdController.text.isEmpty || _clientTokenController.text.isEmpty) {
           throw Exception('Please provide both App ID and Client Token');
         }
@@ -236,7 +233,6 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            // Initialization Section
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -246,7 +242,6 @@ class _HomePageState extends State<HomePage> {
                     Text('Facebook SDK Initialization', style: Theme.of(context).textTheme.titleLarge),
                     const SizedBox(height: 12),
 
-                    // Credential method selection
                     Row(
                       children: [
                         Expanded(
@@ -280,7 +275,6 @@ class _HomePageState extends State<HomePage> {
 
                     const SizedBox(height: 12),
 
-                    // Explicit credentials input (shown when not using environment)
                     if (!_useEnvironmentCredentials) ...[
                       TextField(
                         controller: _appIdController,
@@ -302,7 +296,6 @@ class _HomePageState extends State<HomePage> {
                       const SizedBox(height: 12),
                     ],
 
-                    // Status display
                     Container(
                       padding: const EdgeInsets.all(12),
                       decoration: BoxDecoration(
@@ -337,7 +330,6 @@ class _HomePageState extends State<HomePage> {
 
             const SizedBox(height: 20),
 
-            // Image Selection Section
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -401,7 +393,6 @@ class _HomePageState extends State<HomePage> {
 
             const SizedBox(height: 20),
 
-            // Caption Section
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -425,7 +416,6 @@ class _HomePageState extends State<HomePage> {
 
             const SizedBox(height: 20),
 
-            // Share Section
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
@@ -435,7 +425,6 @@ class _HomePageState extends State<HomePage> {
                     Text('Share to Facebook', style: Theme.of(context).textTheme.titleLarge),
                     const SizedBox(height: 12),
 
-                    // Share result display
                     if (_shareResult != 'No sharing attempted') ...[
                       Container(
                         padding: const EdgeInsets.all(12),
@@ -503,7 +492,6 @@ class _HomePageState extends State<HomePage> {
 
             const SizedBox(height: 20),
 
-            // Setup Instructions
             Card(
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
