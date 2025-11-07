@@ -1,4 +1,4 @@
-# Flutter Social Share
+# Flutter Social Platform Share
 
 A Flutter plugin for sharing images to social platforms like Facebook through their native SDKs.
 
@@ -15,7 +15,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  flutter_social_share: ^1.0.0
+  flutter_social_platform_share: ^1.0.0
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ dependencies:
 ### Initialize and Share
 
 ```dart
-import 'package:flutter_social_share/flutter_social_share.dart';
+import 'package:flutter_social_platform_share/flutter_social_share.dart';
 
 // Initialize Facebook SDK (reads from --dart-define)
 await FlutterSocialShare.facebook.init();

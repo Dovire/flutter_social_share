@@ -1,4 +1,4 @@
-name: flutter_social_share
+name: flutter_social_platform_share
 description: "A Flutter plugin for sharing images to social platforms like Facebook through there SDKs."
 version: 1.0.0
 homepage: https://github.com/dovire/flutter_social_share

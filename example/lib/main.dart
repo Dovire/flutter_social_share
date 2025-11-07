@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_social_platform_share/flutter_social_share.dart';
 import 'dart:async';
 import 'dart:io';
 
-import 'package:flutter_social_share/flutter_social_share.dart';
 import 'package:image_picker/image_picker.dart';
 
 void main() {

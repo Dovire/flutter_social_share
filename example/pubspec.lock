@@ -139,7 +139,7 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.0.29"
-  flutter_social_share:
+  flutter_social_platform_share:
     dependency: "direct main"
     description:
       path: ".."
