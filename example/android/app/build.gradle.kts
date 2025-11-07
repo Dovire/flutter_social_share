@@ -6,8 +6,8 @@ plugins {
 }
 
 android {
-    namespace = "com.example.flutter_social_share_example"
-    compileSdk = 36
+    namespace = "com.dovireinfotech.flutter_social_share_example"
+    compileSdk = 35
     ndkVersion = "27.0.12077973"
 
     compileOptions {
