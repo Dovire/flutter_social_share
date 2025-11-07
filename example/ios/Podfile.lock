@@ -8,7 +8,7 @@ PODS:
   - FBSDKShareKit (17.4.0):
     - FBSDKCoreKit (= 17.4.0)
   - Flutter (1.0.0)
-  - flutter_social_share (0.0.1):
+  - flutter_social_platform_share (1.0.0):
     - FBSDKShareKit (~> 17.0)
     - Flutter
   - image_picker_ios (0.0.1):
@@ -21,7 +21,7 @@ PODS:
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
-  - flutter_social_share (from `.symlinks/plugins/flutter_social_share/ios`)
+  - flutter_social_platform_share (from `.symlinks/plugins/flutter_social_platform_share/ios`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
   - integration_test (from `.symlinks/plugins/integration_test/ios`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
@@ -36,8 +36,8 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
-  flutter_social_share:
-    :path: ".symlinks/plugins/flutter_social_share/ios"
+  flutter_social_platform_share:
+    :path: ".symlinks/plugins/flutter_social_platform_share/ios"
   image_picker_ios:
     :path: ".symlinks/plugins/image_picker_ios/ios"
   integration_test:
@@ -51,7 +51,7 @@ SPEC CHECKSUMS:
   FBSDKCoreKit_Basics: 151b43db8b834d3f0e02f95d36a44ffd36265e45
   FBSDKShareKit: 00546a02dce72f37a4209cd68aaf5fb749185c3b
   Flutter: cabc95a1d2626b1b06e7179b784ebcf0c0cde467
-  flutter_social_share: 84ef33043a2b4fc5e2abb1c29d81ef7a5c606835
+  flutter_social_platform_share: 9ed8aa752f4c755223ddc7aa2ec8b2592c72e5ec
   image_picker_ios: 7fe1ff8e34c1790d6fff70a32484959f563a928a
   integration_test: 4a889634ef21a45d28d50d622cf412dc6d9f586e
   path_provider_foundation: 080d55be775b7414fd5a5ef3ac137b97b097e564

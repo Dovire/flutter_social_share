@@ -1,15 +1,15 @@
 #
 # To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html.
-# Run `pod lib lint flutter_social_share.podspec` to validate before publishing.
+# Run `pod lib lint flutter_social_platform_share.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'flutter_social_share'
-  s.version          = '0.0.1'
+  s.name             = 'flutter_social_platform_share'
+  s.version          = '1.0.0'
   s.summary          = 'A Flutter plugin for sharing images to social platforms like Facebook.'
   s.description      = <<-DESC
 A Flutter plugin for sharing images to social platforms like Facebook with secure credential management.
                        DESC
-  s.homepage         = 'https://github.com/example/flutter_social_share'
+  s.homepage         = 'https://github.com/dovire/flutter_social_share'
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
@@ -26,5 +26,5 @@ A Flutter plugin for sharing images to social platforms like Facebook with secur
   # required reason APIs, update the PrivacyInfo.xcprivacy file to describe your
   # plugin's privacy impact, and then uncomment this line. For more information,
   # see https://developer.apple.com/documentation/bundleresources/privacy_manifest_files
-  # s.resource_bundles = {'flutter_social_share_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
+  # s.resource_bundles = {'flutter_social_platform_share_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
 end
