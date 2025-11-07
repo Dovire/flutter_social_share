@@ -2,6 +2,7 @@ package com.dovireinfotech.flutter_social_share
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import io.flutter.embedding.engine.plugins.FlutterPlugin
 import io.flutter.embedding.engine.plugins.activity.ActivityAware
 import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
@@ -9,12 +10,14 @@ import io.flutter.plugin.common.MethodCall
 import io.flutter.plugin.common.MethodChannel
 import io.flutter.plugin.common.MethodChannel.MethodCallHandler
 import io.flutter.plugin.common.MethodChannel.Result
+import io.flutter.plugin.common.PluginRegistry
 
 /** FlutterSocialSharePlugin */
 class FlutterSocialSharePlugin :
     FlutterPlugin,
     MethodCallHandler,
-    ActivityAware {
+    ActivityAware,
+    PluginRegistry.ActivityResultListener {
     
     // The MethodChannel that will handle communication between Flutter and native Android
     private lateinit var channel: MethodChannel
@@ -85,6 +88,7 @@ class FlutterSocialSharePlugin :
 
     override fun onAttachedToActivity(binding: ActivityPluginBinding) {
         activity = binding.activity
+        binding.addActivityResultListener(this)
     }
 
     override fun onDetachedFromActivityForConfigChanges() {
@@ -93,9 +97,15 @@ class FlutterSocialSharePlugin :
 
     override fun onReattachedToActivityForConfigChanges(binding: ActivityPluginBinding) {
         activity = binding.activity
+        binding.addActivityResultListener(this)
     }
 
     override fun onDetachedFromActivity() {
         activity = null
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?): Boolean {
+        // Forward activity results to Facebook CallbackManager
+        return FacebookCallbackManager.getInstance().onActivityResult(requestCode, resultCode, data)
     }
 }

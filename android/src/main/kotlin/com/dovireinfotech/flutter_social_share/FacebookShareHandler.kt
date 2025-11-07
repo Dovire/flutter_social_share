@@ -76,7 +76,7 @@ class FacebookShareHandler(private val context: Context) {
 
             // Check if Facebook app is available for sharing
             val shareDialog = ShareDialog(activity)
-            if (!shareDialog.canShow(SharePhotoContent::class.java)) {
+            if (!shareDialog.canShow(SharePhotoContent::class)) {
                 result.error(
                     "MISSING_APP",
                     "Facebook app is not installed or sharing is not available",
@@ -88,15 +88,17 @@ class FacebookShareHandler(private val context: Context) {
             // Create SharePhoto from image file
             val imageUri = Uri.fromFile(imageFile)
             val photo = SharePhoto.Builder()
-                .setImageUrl(imageUri)
-                .apply {
-                    caption?.let { setCaption(it) }
-                }
+                .setImageUrl(imageUri)  // For local files, use setImageUrl with file Uri
                 .build()
 
             // Create SharePhotoContent
             val content = SharePhotoContent.Builder()
                 .addPhoto(photo)
+                .apply {
+                    // Note: Caption is not supported in SharePhotoContent
+                    // It's only supported in individual SharePhoto objects in older versions
+                    // For newer Facebook SDK, captions are set on SharePhoto
+                }
                 .build()
 
             // Set up callback for share result
