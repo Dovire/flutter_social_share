@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_social_platform_share'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'A Flutter plugin for sharing images to social platforms like Facebook.'
   s.description      = <<-DESC
 A Flutter plugin for sharing images to social platforms like Facebook with secure credential management.
