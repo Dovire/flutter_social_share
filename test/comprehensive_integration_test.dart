@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_social_share/flutter_social_share.dart';
+import 'package:flutter_social_platform_share/flutter_social_share.dart';
 
 /// Comprehensive integration tests covering all requirements from task 8.2:
 /// - Test with various Android and iOS versions (handled by CI/platform)

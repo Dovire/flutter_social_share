@@ -1,17 +1,5 @@
-#!/usr/bin/env dart
-
-/// End-to-end integration test script for Flutter Social Share plugin.
-/// 
-/// This script demonstrates the complete integration of all components:
-/// - Dart API layer
-/// - Platform interfaces
-/// - Method channel communication
-/// - Native platform implementations
-/// 
-/// Run with: dart run example/test_integration.dart
-
 import 'dart:io';
-import 'package:flutter_social_share/flutter_social_share.dart';
+import 'package:flutter_social_platform_share/flutter_social_share.dart';
 
 void main() async {
   print('🚀 Flutter Social Share - End-to-End Integration Test');

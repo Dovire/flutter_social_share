@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_social_share_example/main.dart';
+import 'package:flutter_social_platform_share_example/main.dart';
 
 void main() {
   group('Flutter Social Share Example Widget Tests', () {

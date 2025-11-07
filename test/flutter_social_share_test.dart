@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_social_share/flutter_social_share.dart';
-import 'package:flutter_social_share/src/platform_interface/facebook_platform_interface.dart';
+import 'package:flutter_social_platform_share/flutter_social_share.dart';
+import 'package:flutter_social_platform_share/src/platform_interface/facebook_platform_interface.dart';
 
 /// Mock implementation of FacebookPlatformInterface for testing
 class MockFacebookPlatformInterface extends FacebookPlatformInterface {
