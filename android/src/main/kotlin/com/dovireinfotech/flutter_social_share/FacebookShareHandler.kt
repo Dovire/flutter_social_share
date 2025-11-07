@@ -74,17 +74,6 @@ class FacebookShareHandler(private val context: Context) {
                 return
             }
 
-            // Check if Facebook app is available for sharing
-            val shareDialog = ShareDialog(activity)
-            if (!shareDialog.canShow(SharePhotoContent::class)) {
-                result.error(
-                    "MISSING_APP",
-                    "Facebook app is not installed or sharing is not available",
-                    mapOf("errorCode" to "missingApp")
-                )
-                return
-            }
-
             // Create SharePhoto from image file
             val imageUri = Uri.fromFile(imageFile)
             val photo = SharePhoto.Builder()
@@ -100,6 +89,17 @@ class FacebookShareHandler(private val context: Context) {
                     // For newer Facebook SDK, captions are set on SharePhoto
                 }
                 .build()
+
+            // Check if Facebook app is available for sharing
+            val shareDialog = ShareDialog(activity)
+            if (!shareDialog.canShow(content)) {
+                result.error(
+                    "MISSING_APP",
+                    "Facebook app is not installed or sharing is not available",
+                    mapOf("errorCode" to "missingApp")
+                )
+                return
+            }
 
             // Set up callback for share result
             shareDialog.registerCallback(

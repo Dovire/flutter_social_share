@@ -7,8 +7,8 @@ plugins {
 
 android {
     namespace = "com.example.flutter_social_share_example"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    compileSdk = 36
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -20,8 +20,8 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.flutter_social_share_example"
-        minSdk = flutter.minSdkVersion
+        applicationId = "com.dovireinfotech.flutter_social_share_example"
+        minSdk = 24
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
         versionName = flutter.versionName
