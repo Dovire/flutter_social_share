@@ -29,7 +29,7 @@ class FacebookShareHandler(private val context: Context) {
             // Initialize Facebook SDK programmatically
             FacebookSdk.setApplicationId(appId)
             FacebookSdk.setClientToken(clientToken)
-            FacebookSdk.sdkInitialize(context)
+            FacebookSdk.fullyInitialize()
             
             isInitialized = true
             Log.d(TAG, "Facebook SDK initialized successfully")
@@ -52,6 +52,7 @@ class FacebookShareHandler(private val context: Context) {
         }
     }
 
+    @Suppress("UNUSED_PARAMETER")
     fun shareImage(activity: Activity, imagePath: String, caption: String?, result: Result) {
         if (!isInitialized) {
             result.error(
